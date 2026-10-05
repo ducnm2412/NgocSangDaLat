@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Khách sạn Ngọc Sang Đà Lạt – Trang chủ</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;family=Dancing+Script:wght@500;600&amp;display=swap">
+<style>
+body{margin:0;background:#FAF6EC}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+a{color:#1F3D2F}a:hover{color:#8F1D2F}
+[id]{scroll-margin-top:24px}
+:focus-visible{outline:3px solid #D9B25A;outline-offset:2px}
+.ns-btn{transition:transform .15s ease,background-color .15s ease}
+.ns-btn:hover{transform:translateY(-1px)}
+.ns-onphoto a{color:#FFFFFF;text-decoration:none}.ns-onphoto a:hover{color:#F1D58F}
+.ns-ondark a{color:#F4EFE2}.ns-ondark a:hover{color:#F1D58F}
+.ns-field{width:100%;height:46px;border:1px solid #CFD8CC;border-radius:10px;padding:0 12px;font:500 15px 'Be Vietnam Pro',system-ui,sans-serif;color:#22332B;background:#FFFFFF}
+textarea.ns-field{height:84px;padding:10px 12px;resize:vertical}
+.ns-barfield{width:100%;height:40px;border:0;border-bottom:1px solid #B9C7B6;background:transparent;padding:0;font:600 15px 'Be Vietnam Pro',system-ui,sans-serif;color:#22332B}
+.ns-faq summary{list-style:none;cursor:pointer}
+.ns-faq summary::-webkit-details-marker{display:none}
+.ns-faq[open] .ns-plus{transform:rotate(45deg)}
+.ns-plus{transition:transform .15s ease}
+.ns-gallery{display:grid;grid-template-columns:1.5fr 1fr 1fr 0.9fr;grid-template-rows:210px 210px;gap:14px}
+.ns-g-a{grid-column:1;grid-row:1 / span 2}
+.ns-g-d{grid-column:4;grid-row:1 / span 2}
+.ns-mobilebar{display:none}
+.ns-float{display:flex}
+@media (max-width:859px){
+.ns-nav{display:none}
+.ns-note{display:none}
+.ns-gallery{grid-template-columns:1fr 1fr;grid-template-rows:none;grid-auto-rows:150px;grid-auto-flow:dense}
+.ns-g-a{grid-column:1 / span 2;grid-row:span 2}
+.ns-g-d{grid-column:auto;grid-row:span 2}
+.ns-mobilebar{display:flex}
+.ns-float{display:none}
+}
+@media (max-width:480px){.ns-headphone{display:none}}
+@media (prefers-reduced-motion:reduce){.ns-btn,.ns-plus{transition:none}html{scroll-behavior:auto}}
+</style>
+</helmet>
+<div style="font-family: 'Be Vietnam Pro', system-ui, sans-serif; color: #22332B; background: #FAF6EC; line-height: 1.6; font-size: 16px">
+
+<section id="top" class="ns-onphoto" style="position: relative; overflow: hidden; background: #16291F; border-radius: 0 0 clamp(28px, 5vw, 64px) clamp(28px, 5vw, 64px)">
+<img src="./assets/06779d7fa1943c6ff21976403083a26b.jpg" alt="Phòng đôi có ban công nhìn ra đồi thông Đà Lạt" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 62%">
+<div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(22,41,31,0.90) 0%, rgba(22,41,31,0.66) 42%, rgba(22,41,31,0.18) 100%)"></div>
+
+<header style="position: relative; z-index: 2">
+<div style="max-width: 1200px; margin: 0 auto; padding: 18px clamp(16px, 5vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 20px">
+<a href="#top" style="display: flex; flex-direction: column; line-height: 1.05">
+<span style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 24px; letter-spacing: 0.04em; text-transform: uppercase">Ngọc Sang</span>
+<span style="font-family: 'Dancing Script', cursive; font-weight: 600; font-size: 18px; color: #F1D58F; align-self: flex-end">Đà Lạt</span>
+</a>
+<nav class="ns-nav" aria-label="Điều hướng chính" style="display: flex; gap: 30px; font-size: 15px; font-weight: 500">
+<a href="#gioi-thieu">Giới thiệu</a>
+<a href="#phong">Phòng nghỉ</a>
+<a href="#trai-nghiem">Trải nghiệm</a>
+<a href="#hinh-anh">Hình ảnh</a>
+<a href="#lien-he">Liên hệ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 14px">
+<a class="ns-headphone" href="tel:0796792222" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 15px; white-space: nowrap">0796 792 222</a>
+<a class="ns-btn" href="#dat-phong" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; font-size: 15px">Đặt phòng</a>
+</div>
+</div>
+</header>
+
+<div style="position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: clamp(40px, 7vw, 96px) clamp(16px, 5vw, 48px) clamp(96px, 11vw, 150px); display: flex; align-items: flex-end; justify-content: space-between; gap: 32px">
+<div style="max-width: 600px">
+<h1 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 600; text-transform: uppercase; line-height: 1.12; color: #FFFFFF">
+<span style="display: block; font-size: clamp(36px, 5.6vw, 66px)">Một chốn nghỉ</span>
+<span style="display: block; font-size: clamp(36px, 5.6vw, 66px)">giữa lòng Đà Lạt,</span>
+<span style="display: block; font-size: clamp(24px, 3.5vw, 42px); color: #F1D58F; margin-top: 6px">ấm cúng và gần phố</span>
+</h1>
+<p style="margin: 20px 0 0; font-size: clamp(15px, 1.5vw, 17px); color: #EEF1EA; max-width: 30em">Hệ thống khách sạn Ngọc Sang có ba chi nhánh tại Đà Lạt. Phòng gỗ ấm, ban công nhìn phố núi, đi bộ 4 phút tới chợ Đà Lạt.</p>
+</div>
+<div class="ns-note" style="flex-shrink: 0; width: 190px; padding: 20px 18px; background: #FAF6EC; color: #1F3D2F; border-radius: 6px; transform: rotate(4deg); box-shadow: 0 18px 30px -16px rgba(0,0,0,0.6); font-family: 'Dancing Script', cursive; font-weight: 600; font-size: 22px; line-height: 1.3; text-align: center; margin-bottom: 40px">Mở cửa ban công là thấy Đà Lạt.</div>
+</div>
+</section>
+
+<div style="position: relative; z-index: 3; max-width: 1200px; margin: clamp(-64px, -5vw, -44px) auto 0; padding: 0 clamp(16px, 5vw, 48px)">
+<div style="background: #E9EFE3; border: 1px solid #D3DDCF; border-radius: 18px; padding: 16px clamp(16px, 2.4vw, 28px); box-shadow: 0 20px 40px -26px rgba(22,41,31,0.55); display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px 28px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<label for="b-checkin" style="font-size: 13px; color: #55655C">Ngày nhận</label>
+<input id="b-checkin" class="ns-barfield" type="date" value="{{ checkin }}" onChange="{{ setCheckin }}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<label for="b-checkout" style="font-size: 13px; color: #55655C">Ngày trả</label>
+<input id="b-checkout" class="ns-barfield" type="date" value="{{ checkout }}" onChange="{{ setCheckout }}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<label for="b-guests" style="font-size: 13px; color: #55655C">Số khách</label>
+<select id="b-guests" class="ns-barfield" value="{{ guests }}" onChange="{{ setGuests }}">
+<option value="1">1 khách</option>
+<option value="2">2 khách</option>
+<option value="3">3 khách</option>
+<option value="4">4 khách</option>
+<option value="5">5 khách</option>
+<option value="6">6 khách</option>
+<option value="7+">Từ 7 khách</option>
+</select>
+</div>
+<a class="ns-btn" href="#dat-phong" style="display: flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 12px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; text-decoration: none">Đặt phòng</a>
+</div>
+</div>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(28px, 4vw, 44px) clamp(16px, 5vw, 48px) 0; display: flex; align-items: center; justify-content: center; gap: 14px">
+<svg width="64" height="28" viewBox="0 0 64 28" fill="none" stroke="#5E7F63" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0"><path d="M2 14h60"></path><path d="M14 14l-7-8M24 14l-7-9M34 14l-7-9M44 14l-7-8M54 14l-6-7"></path><path d="M14 14l-7 8M24 14l-7 9M34 14l-7 9M44 14l-7 8M54 14l-6 7"></path></svg>
+<div style="background: #1F3D2F; color: #FAF6EC; border-radius: 999px; padding: 10px clamp(18px, 4vw, 40px); display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px clamp(12px, 3vw, 32px); font-family: 'Dancing Script', cursive; font-weight: 600; font-size: clamp(20px, 2.6vw, 28px); line-height: 1.3">
+<span>Trung tâm</span>
+<span style="color: #D9B25A" aria-hidden="true">+</span>
+<span>Sạch sẽ</span>
+<span style="color: #D9B25A" aria-hidden="true">+</span>
+<span>Ấm cúng</span>
+</div>
+<svg width="64" height="28" viewBox="0 0 64 28" fill="none" stroke="#5E7F63" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex-shrink: 0; transform: scaleX(-1)"><path d="M2 14h60"></path><path d="M14 14l-7-8M24 14l-7-9M34 14l-7-9M44 14l-7-8M54 14l-6-7"></path><path d="M14 14l-7 8M24 14l-7 9M34 14l-7 9M44 14l-7 8M54 14l-6 7"></path></svg>
+</div>
+
+<section id="gioi-thieu" style="padding: clamp(40px, 6vw, 80px) 0 clamp(32px, 5vw, 64px)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: center; gap: clamp(32px, 6vw, 80px)">
+<div style="flex: 1 1 380px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>01</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Về Ngọc Sang</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: #1F3D2F">Ở trung tâm, đi đâu cũng gần</h2>
+<p style="margin: 14px 0 0; color: #55655C; max-width: 32em">Ngọc Sang đón khách du lịch, cặp đôi, gia đình và khách công tác tại ba chi nhánh ở Đà Lạt. Phòng sạch, thông tin rõ ràng, đặt phòng nhanh qua điện thoại hoặc Zalo.</p>
+<div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+<div style="font-weight: 600; line-height: 1.3">Gần chợ Đà Lạt</div>
+<div style="font-size: 14px; color: #55655C">Đi bộ 4 phút từ Ngọc Sang 1</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6"></path><path d="M3 15h18"></path><path d="M6 10V7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v3"></path><path d="M4 18v2M20 18v2"></path></svg>
+<div style="font-weight: 600; line-height: 1.3">Phòng gỗ ấm cúng</div>
+<div style="font-size: 14px; color: #55655C">Nội thất gỗ, nhiều phòng có ban công</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<div style="font-weight: 600; line-height: 1.3">Lễ tân 24/24</div>
+<div style="font-size: 14px; color: #55655C">Hỗ trợ đặt tour, thuê xe máy</div>
+</div>
+</div>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; position: relative; padding: 0 clamp(20px, 4vw, 44px) clamp(28px, 4vw, 48px) 0">
+<img src="./assets/10ce1a7603134e2b32aea617645d077b.jpg" alt="Quầy lễ tân Ngọc Sang Hotel" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 36px">
+<div style="position: absolute; right: 0; bottom: 0; width: 34%; padding: 8px 8px 22px; background: #FFFFFF; transform: rotate(4deg); box-shadow: 0 16px 30px -14px rgba(22,41,31,0.55)">
+<img src="./assets/e0b92cb1779c691b6e3d673a2cdeed0e.jpg" alt="Mặt tiền Ngọc Sang Hotel trên Đường 3/2" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center 40%">
+</div>
+</div>
+</div>
+</section>
+
+<section id="phong" style="padding: clamp(32px, 5vw, 64px) 0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>02</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Phòng nghỉ</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: #1F3D2F">Phòng cho mọi chuyến đi</h2>
+<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px">
+
+<article style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E3E0D4; box-shadow: 0 14px 28px -24px rgba(22,41,31,0.5)">
+<img src="./assets/afe7e0671398f7b05f90eb014d60921e.jpg" alt="Phòng đôi ốp gỗ thông, cửa mở ra ban công" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+<div style="padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Phòng đôi ban công</h3>
+<div style="font-size: 14px; color: #55655C">Hợp cặp đôi và khách công tác.</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">1 giường đôi</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">Ban công</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">TV</span>
+</div>
+<div style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 14px; font-weight: 600">[Giá / đêm]</span>
+<a class="ns-btn" href="#dat-phong" onClick="{{ pickDoi }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 10px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Đặt phòng</a>
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E3E0D4; box-shadow: 0 14px 28px -24px rgba(22,41,31,0.5)">
+<img src="./assets/8fb1084221a5fae07dbb39f79820aab4.jpg" alt="Phòng hai giường với vách đầu giường ốp gỗ" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 72%">
+<div style="padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Phòng 2 giường</h3>
+<div style="font-size: 14px; color: #55655C">Vừa cho gia đình có trẻ nhỏ.</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">2 giường đôi</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">Cửa sổ</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">[Tiện nghi]</span>
+</div>
+<div style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 14px; font-weight: 600">[Giá / đêm]</span>
+<a class="ns-btn" href="#dat-phong" onClick="{{ pickHai }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 10px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Đặt phòng</a>
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E3E0D4; box-shadow: 0 14px 28px -24px rgba(22,41,31,0.5)">
+<img src="./assets/b6d63797ea8de1a84e7f85c736941677.jpg" alt="Phòng ba giường rộng, nhiều ánh sáng" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+<div style="padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Phòng 3 giường</h3>
+<div style="font-size: 14px; color: #55655C">Dành cho nhóm bạn, đại gia đình.</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">3 giường đôi</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">Cửa sổ lớn</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">[Tiện nghi]</span>
+</div>
+<div style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 14px; font-weight: 600">[Giá / đêm]</span>
+<a class="ns-btn" href="#dat-phong" onClick="{{ pickBa }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 10px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Đặt phòng</a>
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-direction: column; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E3E0D4; box-shadow: 0 14px 28px -24px rgba(22,41,31,0.5)">
+<img src="./assets/d91961102f653b57df7fd0f6845db325.jpg" alt="Phòng áp mái trần gỗ thông, cửa vòm nhìn ra thành phố" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover">
+<div style="padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Phòng áp mái gỗ thông</h3>
+<div style="font-size: 14px; color: #55655C">Tầng cao nhất, nhìn ra phố và núi.</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">1 giường đôi</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">Trần gỗ</span>
+<span style="font-size: 13px; padding: 3px 10px; border-radius: 6px; background: #E9EFE3; color: #1F3D2F">View phố</span>
+</div>
+<div style="margin-top: auto; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 14px; font-weight: 600">[Giá / đêm]</span>
+<a class="ns-btn" href="#dat-phong" onClick="{{ pickApMai }}" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 10px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Đặt phòng</a>
+</div>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="trai-nghiem" style="padding: clamp(32px, 5vw, 64px) 0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>03</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Trải nghiệm</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: #1F3D2F">Những khoảnh khắc đáng nhớ</h2>
+<div style="margin-top: 24px; display: flex; flex-wrap: wrap; align-items: center; gap: clamp(28px, 5vw, 64px)">
+<div style="flex: 1 1 340px; min-width: 0; position: relative; padding: 0 clamp(16px, 3vw, 36px) clamp(16px, 2vw, 24px) 0">
+<img src="./assets/58431c2713d6fac141e7cd39cbbe6cf7.jpg" alt="Giường trang trí cánh hoa hồng, khăn xếp thiên nga và bóng bay" style="display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 60%; border-radius: 16px">
+<div style="position: absolute; right: 0; bottom: 0; width: 30%; padding: 6px 6px 16px; background: #FFFFFF; transform: rotate(5deg); box-shadow: 0 14px 26px -12px rgba(22,41,31,0.55)">
+<img src="./assets/f98705500036cc724f8d3213d1f958be.jpg" alt="Phòng đôi nhìn ra thành phố qua cửa kính" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover">
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px">
+<div style="background: #E9EFE3; border: 1px solid #D3DDCF; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.5A3.9 3.9 0 0 1 12 8a3.9 3.9 0 0 1 7 2.500C19 15.600 12 20 12 20z"></path></svg>
+<div style="font-weight: 600; line-height: 1.3">Trang trí phòng theo dịp</div>
+<div style="font-size: 14px; color: #55655C">Kỷ niệm, sinh nhật, cầu hôn</div>
+</div>
+<div style="background: #E9EFE3; border: 1px solid #D3DDCF; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h16l-1.500-5h-13z"></path><path d="M5 10v9h14v-9"></path><path d="M10 19v-5h4v5"></path></svg>
+<div style="font-weight: 600; line-height: 1.3">Đi bộ ra chợ đêm</div>
+<div style="font-size: 14px; color: #55655C">4 phút từ Ngọc Sang 1</div>
+</div>
+<div style="background: #E9EFE3; border: 1px solid #D3DDCF; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19l6-9 4 5 3-4 5 8z"></path><circle cx="17" cy="6" r="2"></circle></svg>
+<div style="font-weight: 600; line-height: 1.3">Ngắm phố núi từ ban công</div>
+<div style="font-size: 14px; color: #55655C">Sáng có sương, tối lên đèn</div>
+</div>
+<div style="background: #E9EFE3; border: 1px solid #D3DDCF; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 6px">
+<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1F3D2F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="17" r="3"></circle><circle cx="18" cy="17" r="3"></circle><path d="M6 17l4-8h4l4 8"></path><path d="M13 6h3"></path></svg>
+<div style="font-weight: 600; line-height: 1.3">Đặt tour, thuê xe máy</div>
+<div style="font-size: 14px; color: #55655C">Lễ tân hỗ trợ và chỉ đường</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="chi-nhanh" style="padding: clamp(32px, 5vw, 64px) 0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>04</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Chi nhánh</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: #1F3D2F">Ba địa chỉ tại Đà Lạt</h2>
+<div style="margin-top: 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px">
+
+<article style="display: flex; gap: 16px; align-items: center; background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 14px; padding: 14px">
+<img src="./assets/e0b92cb1779c691b6e3d673a2cdeed0e.jpg" alt="Mặt tiền Ngọc Sang 1" style="display: block; width: 104px; height: 136px; object-fit: cover; object-position: center 40%; border-radius: 10px; flex-shrink: 0">
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Ngọc Sang 1</h3>
+<div style="font-size: 14px; color: #55655C">Ngay trung tâm, gần chợ và Hồ Xuân Hương.</div>
+<div style="font-size: 14px; font-weight: 500">20 Đường 3/2, P. Xuân Hương</div>
+</div>
+</article>
+
+<article style="display: flex; gap: 16px; align-items: center; background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 14px; padding: 14px">
+<img src="./assets/1ab0692dd8dc18d88b6f7959afb036b5.jpg" alt="Mặt tiền villa trắng cổng vàng của chi nhánh Xuân Bình" style="display: block; width: 104px; height: 136px; object-fit: cover; border-radius: 10px; flex-shrink: 0">
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Ngọc Sang 2 – Xuân Bình</h3>
+<div style="font-size: 14px; color: #55655C">Villa có sân, phòng ban công nhìn ra đồi.</div>
+<div style="font-size: 14px; font-weight: 500">[Địa chỉ chi nhánh 2]</div>
+</div>
+</article>
+
+<article style="display: flex; gap: 16px; align-items: center; background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 14px; padding: 14px">
+<div style="width: 104px; height: 136px; border-radius: 10px; overflow: hidden; flex-shrink: 0; background: #DCE8E3">
+<svg viewBox="0 0 300 400" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Minh hoạ đồi thông Đà Lạt">
+<rect width="300" height="400" fill="#DCE8E3"></rect>
+<circle cx="214" cy="104" r="34" fill="#D9B25A"></circle>
+<path d="M0 230 Q70 150 150 205 T300 180 V400 H0 Z" fill="#A9C4B8"></path>
+<path d="M0 280 Q90 215 170 262 T300 240 V400 H0 Z" fill="#5E8C7A"></path>
+<path d="M0 330 Q100 280 190 316 T300 300 V400 H0 Z" fill="#2C5B4C"></path>
+<path d="M0 372 Q110 338 300 358 V400 H0 Z" fill="#16291F"></path>
+<g fill="#16291F">
+<path d="M62 356 L62 250 L44 286 L56 286 L38 318 L54 318 L34 356 Z"></path>
+<path d="M62 356 L62 250 L80 286 L68 286 L86 318 L70 318 L90 356 Z"></path>
+<path d="M250 362 L250 262 L233 296 L244 296 L227 326 L242 326 L223 362 Z"></path>
+<path d="M250 362 L250 262 L267 296 L256 296 L273 326 L258 326 L277 362 Z"></path>
+</g>
+<path d="M158 352 V318 L184 298 L210 318 V352 Z" fill="#FAF6EC"></path>
+<path d="M152 320 L184 294 L216 320" fill="none" stroke="#8F1D2F" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<h3 style="margin: 0; font-size: 18px; font-weight: 600">Ngọc Sang 3 – Tùng Lâm</h3>
+<div style="font-size: 14px; color: #55655C">Yên tĩnh, giá mềm nhất trong ba chi nhánh.</div>
+<div style="font-size: 14px; font-weight: 500">[Địa chỉ chi nhánh 3]</div>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="hinh-anh" style="padding: clamp(32px, 5vw, 64px) 0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>05</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Hình ảnh</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: #1F3D2F">Không gian qua từng khoảnh khắc</h2>
+<div class="ns-gallery" style="margin-top: 24px">
+<img class="ns-g-a" src="./assets/324af2b04218248102ad49d00a94b97c.jpg" alt="Phòng gia đình hai giường với sàn gỗ xương cá" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 70%; border-radius: 12px">
+<img src="./assets/f27c1e3531d2cd3c88c6f3566c46e51d.jpg" alt="Phòng hai giường đầu giường gỗ chạm" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px">
+<img src="./assets/65a9281c3206d30cefa8d960c63a195f.jpg" alt="Phòng áp mái ốp gỗ có ban công riêng" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px">
+<img class="ns-g-d" src="./assets/2851af34cd8e148352bb60c49767c349.jpg" alt="Ngọc Sang Hotel sáng đèn buổi tối" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px">
+<img src="./assets/f98705500036cc724f8d3213d1f958be.jpg" alt="Phòng đôi nhìn ra thành phố qua cửa kính lớn" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px">
+<img src="./assets/f616a6111266b38b0b2ef6b67add3921.jpg" alt="Phòng tắm riêng với vách kính và vòi sen" style="display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 12px">
+</div>
+<div style="display: flex; justify-content: flex-end; margin-top: 10px">
+<a href="https://www.facebook.com/hethongkhachsanngocsangdalat/?locale=vi_VN" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; font-size: 15px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M15 8h-1.500A1.500 1.500 0 0 0 12 9.500V21"></path><path d="M9.500 13h5"></path></svg>
+Xem thêm trên Facebook
+</a>
+</div>
+</div>
+</section>
+
+<section style="padding: clamp(32px, 5vw, 64px) 0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>06</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Cảm nhận khách</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: #1F3D2F">Khách nói gì về Ngọc Sang?</h2>
+<div style="margin-top: 24px; background: #E9EFE3; border-radius: 22px; padding: clamp(14px, 2vw, 22px); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+<figure style="margin: 0; background: #FAF6EC; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #CFD8CC; flex-shrink: 0"></span>
+<figcaption style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 14px; font-weight: 600">[Tên khách hàng]</span>
+<span style="font-size: 13px; color: #55655C">[Số sao đánh giá]</span>
+</figcaption>
+</div>
+<blockquote style="margin: 0; font-size: 15px; color: #55655C">[Nội dung đánh giá của khách hàng]</blockquote>
+</figure>
+<figure style="margin: 0; background: #FAF6EC; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #CFD8CC; flex-shrink: 0"></span>
+<figcaption style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 14px; font-weight: 600">[Tên khách hàng]</span>
+<span style="font-size: 13px; color: #55655C">[Số sao đánh giá]</span>
+</figcaption>
+</div>
+<blockquote style="margin: 0; font-size: 15px; color: #55655C">[Nội dung đánh giá của khách hàng]</blockquote>
+</figure>
+<figure style="margin: 0; background: #FAF6EC; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #CFD8CC; flex-shrink: 0"></span>
+<figcaption style="display: flex; flex-direction: column; gap: 2px">
+<span style="font-size: 14px; font-weight: 600">[Tên khách hàng]</span>
+<span style="font-size: 13px; color: #55655C">[Số sao đánh giá]</span>
+</figcaption>
+</div>
+<blockquote style="margin: 0; font-size: 15px; color: #55655C">[Nội dung đánh giá của khách hàng]</blockquote>
+</figure>
+</div>
+</div>
+</section>
+
+<section style="padding: clamp(32px, 5vw, 64px) 0 clamp(40px, 6vw, 72px)">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: flex-start; gap: clamp(28px, 4vw, 56px)">
+
+<div style="flex: 1 1 320px; min-width: 0">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #55655C"><span>07</span><span style="width: 36px; height: 1px; background: #1F3D2F"></span><span>Hỏi đáp</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.2; color: #1F3D2F">Những câu hỏi thường gặp</h2>
+<div style="margin-top: 20px; display: flex; flex-direction: column; gap: 12px">
+<details class="ns-faq" style="background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 10px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 16px; font-weight: 500; font-size: 15px"><span>Giờ nhận phòng và trả phòng là khi nào?</span><span class="ns-plus" aria-hidden="true" style="font-size: 22px; line-height: 1; color: #8F1D2F">+</span></summary>
+<div style="padding: 0 16px 16px; font-size: 15px; color: #55655C">[Giờ nhận phòng / trả phòng]</div>
+</details>
+<details class="ns-faq" style="background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 10px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 16px; font-weight: 500; font-size: 15px"><span>Chính sách đặt cọc và huỷ phòng như thế nào?</span><span class="ns-plus" aria-hidden="true" style="font-size: 22px; line-height: 1; color: #8F1D2F">+</span></summary>
+<div style="padding: 0 16px 16px; font-size: 15px; color: #55655C">[Chính sách đặt cọc và huỷ phòng]</div>
+</details>
+<details class="ns-faq" style="background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 10px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 16px; font-weight: 500; font-size: 15px"><span>Có chỗ đậu xe không?</span><span class="ns-plus" aria-hidden="true" style="font-size: 22px; line-height: 1; color: #8F1D2F">+</span></summary>
+<div style="padding: 0 16px 16px; font-size: 15px; color: #55655C">[Thông tin chỗ đậu xe máy, ô tô theo từng chi nhánh]</div>
+</details>
+<details class="ns-faq" style="background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 10px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 16px; font-weight: 500; font-size: 15px"><span>Khách sạn có nhận trang trí phòng không?</span><span class="ns-plus" aria-hidden="true" style="font-size: 22px; line-height: 1; color: #8F1D2F">+</span></summary>
+<div style="padding: 0 16px 16px; font-size: 15px; color: #55655C">Có. Bạn báo dịp cần trang trí khi đặt phòng để khách sạn chuẩn bị trước.</div>
+</details>
+<details class="ns-faq" style="background: #FFFFFF; border: 1px solid #E3E0D4; border-radius: 10px">
+<summary style="display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 8px 16px; font-weight: 500; font-size: 15px"><span>Từ khách sạn ra chợ Đà Lạt bao xa?</span><span class="ns-plus" aria-hidden="true" style="font-size: 22px; line-height: 1; color: #8F1D2F">+</span></summary>
+<div style="padding: 0 16px 16px; font-size: 15px; color: #55655C">Ngọc Sang 1 cách chợ Đà Lạt khoảng 4 phút đi bộ, cách Hồ Xuân Hương khoảng 8 phút.</div>
+</details>
+</div>
+</div>
+
+<div id="lien-he" class="ns-ondark" style="flex: 2 1 480px; min-width: 0; background: #1F3D2F; color: #F4EFE2; border-radius: 28px; padding: clamp(20px, 3vw, 36px)">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; color: #C9D6C6"><span>08</span><span style="width: 36px; height: 1px; background: #C9D6C6"></span><span>Liên hệ và đặt phòng</span></div>
+<h2 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 700; text-transform: uppercase; font-size: clamp(22px, 2.6vw, 28px); line-height: 1.2; color: #FFFFFF">Liên hệ với Ngọc Sang</h2>
+<div style="margin-top: 22px; display: flex; flex-wrap: wrap; gap: 24px">
+
+<div style="flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 16px; font-size: 15px">
+<div style="display: flex; gap: 12px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9B25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+<div><div style="font-weight: 600; color: #FFFFFF">Địa chỉ</div><div>20 Đường 3/2, P. Xuân Hương, Đà Lạt, Lâm Đồng</div></div>
+</div>
+<div style="display: flex; gap: 12px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9B25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
+<div><div style="font-weight: 600; color: #FFFFFF">SĐT / Zalo</div><a href="tel:0796792222" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 18px">0796 792 222</a></div>
+</div>
+<div style="display: flex; gap: 12px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D9B25A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+<div><div style="font-weight: 600; color: #FFFFFF">Giờ nhận / trả phòng</div><div>[Giờ nhận / trả phòng]</div></div>
+</div>
+<a class="ns-btn" href="https://share.google/H0d7xEVLYqkjkAl7N" target="_blank" rel="noopener" style="position: relative; display: block; border-radius: 14px; overflow: hidden; background: #E9EFE3; text-decoration: none; min-height: 140px">
+<svg viewBox="0 0 300 150" width="100%" height="150" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="display: block">
+<rect width="300" height="150" fill="#E9EFE3"></rect>
+<path d="M-10 40 L120 62 L210 30 L310 48" fill="none" stroke="#FFFFFF" stroke-width="10"></path>
+<path d="M60 -10 L96 160" fill="none" stroke="#FFFFFF" stroke-width="8"></path>
+<path d="M-10 118 L150 96 L310 124" fill="none" stroke="#FFFFFF" stroke-width="8"></path>
+<path d="M200 -10 L176 160" fill="none" stroke="#FFFFFF" stroke-width="6"></path>
+<path d="M228 86 Q262 70 300 96 V150 H236 Z" fill="#BFD6DE"></path>
+<path d="M150 88 c0 -13 -9 -22 -20 -22 s-20 9 -20 22 c0 14 20 30 20 30 s20 -16 20 -30 z" fill="#8F1D2F" transform="translate(12 -22)"></path>
+<circle cx="142" cy="64" r="7" fill="#FFFFFF"></circle>
+</svg>
+<span style="position: absolute; left: 10px; bottom: 10px; background: #FFFFFF; color: #1F3D2F; border-radius: 8px; padding: 8px 12px; font-size: 14px; font-weight: 600">Mở Google Maps</span>
+</a>
+</div>
+
+<div id="dat-phong" style="flex: 1.4 1 300px; min-width: 0; background: #FAF6EC; color: #22332B; border-radius: 16px; padding: clamp(16px, 2vw, 22px)">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 5px">
+<label for="f-name" style="font-size: 13px; font-weight: 500; color: #55655C">Họ và tên</label>
+<input id="f-name" class="ns-field" type="text" autocomplete="name" placeholder="Nhập họ tên" value="{{ name }}" onChange="{{ setName }}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<label for="f-phone" style="font-size: 13px; font-weight: 500; color: #55655C">SĐT / Zalo</label>
+<input id="f-phone" class="ns-field" type="tel" autocomplete="tel" placeholder="Nhập số điện thoại" value="{{ phone }}" onChange="{{ setPhone }}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<label for="f-checkin" style="font-size: 13px; font-weight: 500; color: #55655C">Ngày nhận</label>
+<input id="f-checkin" class="ns-field" type="date" value="{{ checkin }}" onChange="{{ setCheckin }}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<label for="f-checkout" style="font-size: 13px; font-weight: 500; color: #55655C">Ngày trả</label>
+<input id="f-checkout" class="ns-field" type="date" value="{{ checkout }}" onChange="{{ setCheckout }}">
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<label for="f-guests" style="font-size: 13px; font-weight: 500; color: #55655C">Số khách</label>
+<select id="f-guests" class="ns-field" value="{{ guests }}" onChange="{{ setGuests }}">
+<option value="1">1 khách</option>
+<option value="2">2 khách</option>
+<option value="3">3 khách</option>
+<option value="4">4 khách</option>
+<option value="5">5 khách</option>
+<option value="6">6 khách</option>
+<option value="7+">Từ 7 khách</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<label for="f-room" style="font-size: 13px; font-weight: 500; color: #55655C">Loại phòng</label>
+<select id="f-room" class="ns-field" value="{{ room }}" onChange="{{ setRoom }}">
+<option value="Phòng đôi ban công">Phòng đôi ban công</option>
+<option value="Phòng 2 giường">Phòng 2 giường</option>
+<option value="Phòng 3 giường">Phòng 3 giường</option>
+<option value="Phòng áp mái gỗ thông">Phòng áp mái gỗ thông</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; grid-column: 1 / -1">
+<label for="f-branch" style="font-size: 13px; font-weight: 500; color: #55655C">Chi nhánh</label>
+<select id="f-branch" class="ns-field" value="{{ branch }}" onChange="{{ setBranch }}">
+<option value="Ngọc Sang 1 (Đường 3/2)">Ngọc Sang 1 – 20 Đường 3/2</option>
+<option value="Ngọc Sang 2 (Xuân Bình)">Ngọc Sang 2 – Xuân Bình</option>
+<option value="Ngọc Sang 3 (Tùng Lâm)">Ngọc Sang 3 – Tùng Lâm</option>
+<option value="chi nhánh do khách sạn tư vấn">Nhờ khách sạn tư vấn</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; grid-column: 1 / -1">
+<label for="f-note" style="font-size: 13px; font-weight: 500; color: #55655C">Ghi chú</label>
+<textarea id="f-note" class="ns-field" placeholder="Ghi chú thêm (nếu có)" value="{{ note }}" onChange="{{ setNote }}"></textarea>
+</div>
+</div>
+<button class="ns-btn" type="button" onClick="{{ submit }}" style="margin-top: 14px; width: 100%; min-height: 52px; border: 0; border-radius: 12px; background: #8F1D2F; color: #FFFFFF; font: 600 16px 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer">Gửi yêu cầu đặt phòng</button>
+<sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+<p role="alert" style="margin: 12px 0 0; padding: 12px 14px; border-radius: 10px; background: #FBECEE; color: #7A1626; font-size: 14.5px">{{ errorText }}</p>
+</sc-if>
+<sc-if value="{{ showSummary }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="margin-top: 14px; padding: 16px; border-radius: 12px; background: #E9EFE3; border: 1px solid #D3DDCF; display: flex; flex-direction: column; gap: 10px">
+<div style="font-weight: 600; font-size: 15px">Yêu cầu đặt phòng của bạn</div>
+<div style="font-size: 15px">{{ summary }}</div>
+<div style="font-size: 14px; color: #55655C">Gửi nội dung này cho lễ tân để giữ phòng và nhận giá.</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<a class="ns-btn" href="https://zalo.me/0796792222" target="_blank" rel="noopener" style="flex: 1 1 140px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 16px; border-radius: 10px; background: #1F3D2F; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none">Gửi qua Zalo</a>
+<a class="ns-btn" href="tel:0796792222" style="flex: 1 1 140px; display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 16px; border-radius: 10px; background: #FFFFFF; border: 1.5px solid #1F3D2F; color: #1F3D2F; font-weight: 600; font-size: 15px; text-decoration: none">Gọi 0796 792 222</a>
+</div>
+</div>
+</sc-if>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<footer class="ns-ondark" style="background: #16291F; color: #C9D6C6; padding: 32px 0 36px; font-size: 14.5px">
+<div style="max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 40px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px">
+<div style="display: flex; flex-direction: column; line-height: 1.05; color: #FFFFFF">
+<span style="font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 24px; letter-spacing: 0.04em; text-transform: uppercase">Ngọc Sang</span>
+<span style="font-family: 'Dancing Script', cursive; font-weight: 600; font-size: 18px; color: #F1D58F; align-self: flex-end">Đà Lạt</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<span>Khách sạn, dịch vụ lưu trú tại Đà Lạt</span>
+<span>20 Đường 3/2, P. Xuân Hương, Đà Lạt, Lâm Đồng</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px">
+<a href="https://www.facebook.com/hethongkhachsanngocsangdalat/?locale=vi_VN" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px">Facebook</a>
+<a href="https://share.google/H0d7xEVLYqkjkAl7N" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px">Google Maps</a>
+<a href="https://zalo.me/0796792222" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px">Zalo</a>
+</div>
+<span>© 2026 Hệ Thống Khách Sạn Ngọc Sang Đà Lạt</span>
+</div>
+</div>
+</footer>
+
+<div class="ns-float" style="position: sticky; bottom: 24px; z-index: 30; height: 0; justify-content: flex-end; align-items: flex-end; padding-right: 24px">
+<a class="ns-btn" href="https://zalo.me/0796792222" target="_blank" rel="noopener" aria-label="Nhắn Zalo cho Ngọc Sang" style="display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; background: #0A63D8; color: #FFFFFF; font-weight: 600; font-size: 16px; text-decoration: none; border: 3px solid #FFFFFF; box-shadow: 0 12px 24px -10px rgba(0,0,0,0.55)">Zalo</a>
+</div>
+
+<div class="ns-mobilebar" style="position: sticky; bottom: 0; z-index: 30; gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px)); background: #FFFFFF; border-top: 1px solid #E3E0D4; box-shadow: 0 -10px 24px -18px rgba(22,41,31,0.5)">
+<a href="tel:0796792222" style="flex: 1 1 0; display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 12px; border: 1.5px solid #1F3D2F; color: #1F3D2F; font-weight: 600; text-decoration: none">Gọi</a>
+<a href="https://zalo.me/0796792222" target="_blank" rel="noopener" style="flex: 1 1 0; display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 12px; border: 1.5px solid #1F3D2F; color: #1F3D2F; font-weight: 600; text-decoration: none">Zalo</a>
+<a href="#dat-phong" style="flex: 2 1 0; display: flex; align-items: center; justify-content: center; min-height: 50px; border-radius: 12px; background: #8F1D2F; color: #FFFFFF; font-weight: 600; text-decoration: none">Đặt phòng</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5800}}'>
+class Component extends DCLogic {
+renderVals() {
+const s = this.state || {};
+const pad = (n) => String(n).padStart(2, '0');
+const iso = (d) => d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+const now = new Date();
+const checkin = s.checkin || iso(new Date(now.getTime() + 86400000));
+const checkout = s.checkout || iso(new Date(now.getTime() + 2 * 86400000));
+const guests = s.guests || '2';
+const room = s.room || 'Phòng đôi ban công';
+const branch = s.branch || 'Ngọc Sang 1 (Đường 3/2)';
+const name = s.name || '';
+const phone = s.phone || '';
+const note = s.note || '';
+const toDate = (v) => { const p = String(v).split('-'); return new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2])); };
+const vn = (v) => { const p = String(v).split('-'); return p[2] + '/' + p[1] + '/' + p[0]; };
+const nights = Math.round((toDate(checkout) - toDate(checkin)) / 86400000);
+const datesOk = nights >= 1;
+const phoneOk = phone.replace(/\D/g, '').length >= 9;
+const valid = datesOk && phoneOk;
+const errorText = !datesOk ? 'Ngày trả phòng phải sau ngày nhận phòng. Chọn lại ngày rồi gửi yêu cầu.' : 'Nhập số điện thoại hoặc Zalo để lễ tân liên hệ lại.';
+const guestText = guests === '7+' ? 'từ 7 khách' : guests + ' khách';
+const summary = valid ? ((name ? name + ', ' : '') + phone + '. Đặt ' + room + ' tại ' + branch + ', ' + guestText + ', nhận phòng ' + vn(checkin) + ', trả phòng ' + vn(checkout) + ' (' + nights + ' đêm).' + (note ? ' Ghi chú: ' + note : '')) : '';
+const set = (key) => (e) => { const o = {}; o[key] = e.target.value; this.setState(o); };
+const pick = (r) => () => this.setState({ room: r });
+return {
+checkin: checkin,
+checkout: checkout,
+guests: guests,
+room: room,
+branch: branch,
+name: name,
+phone: phone,
+note: note,
+summary: summary,
+errorText: errorText,
+showSummary: !!s.sent && valid,
+showError: !!s.sent && !valid,
+setCheckin: set('checkin'),
+setCheckout: set('checkout'),
+setGuests: set('guests'),
+setRoom: set('room'),
+setBranch: set('branch'),
+setName: set('name'),
+setPhone: set('phone'),
+setNote: set('note'),
+submit: () => this.setState({ sent: true }),
+pickDoi: pick('Phòng đôi ban công'),
+pickHai: pick('Phòng 2 giường'),
+pickBa: pick('Phòng 3 giường'),
+pickApMai: pick('Phòng áp mái gỗ thông')
+};
+}
+}
+</script>
+</body>
+</html>
