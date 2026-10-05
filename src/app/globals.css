@@ -194,6 +194,18 @@
       transform: scaleX(1.08) translateX(3%);
     }
   }
+  .ns-polaroid {
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      rotate 0.3s ease,
+      scale 0.3s ease;
+  }
+  .ns-polaroid:hover {
+    rotate: 0deg;
+    scale: 1.04;
+    z-index: 1;
+  }
   .ns-zoomable {
     cursor: zoom-in;
   }
@@ -206,7 +218,7 @@
       transform: scale(1);
     }
     to {
-      transform: scale(1.12);
+      transform: scale(1.06);
     }
   }
   .ns-zoom {

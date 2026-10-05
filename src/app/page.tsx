@@ -6,7 +6,6 @@ import {
   BookRoomLink,
 } from "@/components/booking";
 import { AutoScroller } from "@/components/auto-scroller";
-import { GalleryCarousel } from "@/components/gallery";
 import { Lightbox } from "@/components/lightbox";
 import { RevealOnScroll } from "@/components/reveal";
 import { img } from "@/lib/images";
@@ -103,18 +102,42 @@ const discoveries = [
 ];
 
 const gallery = [
-  { src: img.leTan, alt: "Quầy lễ tân Ngọc Sang Hotel" },
-  { src: img.phongGiaDinh, alt: "Phòng gia đình hai giường, sàn gỗ xương cá" },
-  { src: img.phongDoiBanCong, alt: "Phòng đôi có ban công nhìn ra đồi" },
   {
-    src: img.phong2GiuongGo,
-    alt: "Phòng hai giường với vách đầu giường ốp gỗ",
+    src: img.phongGiaDinh,
+    alt: "Phòng gia đình hai giường, sàn gỗ xương cá",
+    caption: "Phòng cho cả nhà",
+    tilt: "-rotate-2",
   },
-  { src: img.phongApMaiBanCong, alt: "Phòng áp mái ốp gỗ có ban công riêng" },
-  { src: img.phong3Giuong, alt: "Phòng ba giường rộng, nhiều ánh sáng" },
-  { src: img.hero, alt: "Phòng đôi ốp gỗ thông, cửa gỗ mở ra ban công" },
-  { src: img.phongTam, alt: "Phòng tắm riêng với vách kính và vòi sen" },
-  { src: img.matTienDem, alt: "Ngọc Sang Hotel sáng đèn buổi tối" },
+  {
+    src: img.phongViewPho,
+    alt: "Phòng đôi nhìn ra thành phố qua cửa kính",
+    caption: "Sáng sương ngoài cửa",
+    tilt: "rotate-[1.5deg]",
+  },
+  {
+    src: img.phongApMaiBanCong,
+    alt: "Phòng áp mái ốp gỗ có ban công riêng",
+    caption: "Góc áp mái gỗ thông",
+    tilt: "-rotate-1",
+  },
+  {
+    src: img.matTienDem,
+    alt: "Ngọc Sang Hotel sáng đèn buổi tối",
+    caption: "Ngọc Sang lên đèn",
+    tilt: "rotate-2",
+  },
+  {
+    src: img.leTan,
+    alt: "Quầy lễ tân Ngọc Sang Hotel",
+    caption: "Lễ tân đón bạn",
+    tilt: "-rotate-[1.5deg]",
+  },
+  {
+    src: img.phong2Giuong,
+    alt: "Phòng hai giường đôi với đầu giường gỗ chạm",
+    caption: "Giường gỗ chạm tay",
+    tilt: "rotate-1",
+  },
 ];
 
 const arrow = <span aria-hidden="true">→</span>;
@@ -284,8 +307,15 @@ function Backdrop({
 }) {
   return (
     <>
-      <Image src={src} alt="" fill sizes="100vw" className="object-cover" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,41,31,0.72)_0%,rgba(22,41,31,0.3)_45%,rgba(22,41,31,0.2)_100%)]" />
+      <Image
+        src={src}
+        alt=""
+        fill
+        sizes="100vw"
+        quality={100}
+        className="object-cover"
+      />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,41,31,0.55)_0%,rgba(22,41,31,0.12)_42%,rgba(22,41,31,0.06)_100%)]" />
       <Wave flip className="absolute inset-x-0 -top-px text-cream" />
       {!noBottomEdge && (
         <Wave className="absolute inset-x-0 -bottom-px text-cream" />
@@ -329,11 +359,12 @@ export default function Home() {
           fill
           preload
           sizes="100vw"
+          quality={100}
           placeholder="blur"
           className="ns-kenburns object-cover object-[38%_45%] nav:object-[center_45%]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.82)_0%,rgba(22,41,31,0.5)_38%,rgba(22,41,31,0.04)_72%)]" />
-        <div className="absolute inset-0 bg-deep/40 nav:hidden" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.68)_0%,rgba(22,41,31,0.34)_36%,rgba(22,41,31,0)_66%)]" />
+        <div className="absolute inset-0 bg-deep/30 nav:hidden" />
 
         <header className="relative z-2">
           <div className="ns-container flex items-center justify-between gap-5 py-[18px]">
@@ -651,9 +682,10 @@ export default function Home() {
             alt="Thành phố Đà Lạt lên đèn về đêm, nhìn qua những thân thông"
             fill
             sizes="100vw"
+            quality={100}
             className="object-cover object-[center_58%]"
           />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.88)_0%,rgba(22,41,31,0.55)_48%,rgba(22,41,31,0.25)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.8)_0%,rgba(22,41,31,0.4)_48%,rgba(22,41,31,0.1)_100%)]" />
           <div className="ns-container relative flex flex-wrap items-center gap-[clamp(28px,5vw,64px)] py-[clamp(72px,10vw,140px)]">
             <div className="ns-reveal min-w-0 flex-[1_1_320px]">
               <div className="text-[13px] font-medium tracking-[0.22em] text-gold-soft uppercase">
@@ -717,8 +749,28 @@ export default function Home() {
               </div>
               <h2 className="ns-h2">Một góc Đà Lạt của Ngọc Sang</h2>
             </div>
-            <div className="ns-reveal mt-6">
-              <GalleryCarousel items={gallery} />
+            <div className="mx-auto mt-8 grid max-w-[900px] grid-cols-2 gap-x-[clamp(14px,3vw,36px)] gap-y-[clamp(26px,4vw,44px)] nav:grid-cols-3">
+              {gallery.map((shot, i) => (
+                <figure
+                  key={shot.caption}
+                  style={{ transitionDelay: `${(i % 3) * 80}ms` }}
+                  className={`ns-reveal ns-polaroid relative bg-white px-[clamp(7px,1vw,11px)] pt-[clamp(7px,1vw,11px)] pb-2 shadow-[0_18px_30px_-16px_rgba(22,41,31,0.55)] ${shot.tilt}`}
+                >
+                  <span
+                    aria-hidden="true"
+                    className="absolute -top-3 left-1/2 h-6 w-[34%] -translate-x-1/2 -rotate-2 bg-[#E6CF95]/90 shadow-sm"
+                  />
+                  <Image
+                    src={shot.src}
+                    alt={shot.alt}
+                    sizes="(min-width: 860px) 280px, 46vw"
+                    className="ns-zoomable aspect-[5/4] w-full object-cover"
+                  />
+                  <figcaption className="pt-1.5 text-center font-script text-[clamp(20px,2.6vw,28px)] leading-[1.25] text-forest">
+                    {shot.caption}
+                  </figcaption>
+                </figure>
+              ))}
             </div>
             <div className="mt-5 flex justify-center">
               <a
@@ -774,56 +826,65 @@ export default function Home() {
             </AutoScroller>
           </div>
         </section>
+      </div>
 
-        <section className="pt-[clamp(20px,3vw,36px)] pb-[clamp(28px,4vw,48px)]">
-          <div className="ns-container flex flex-col gap-[clamp(32px,4.5vw,56px)]">
-            <div className="ns-reveal">
-              <div className="ns-eyebrow">
-                <span>08</span>
-                <i />
-                <span>Hỏi đáp</span>
-              </div>
-              <h2 className="ns-h2">Những câu hỏi thường gặp</h2>
-              <div className="mt-5 flex flex-col gap-3">
-                {faqs.map((faq) => (
-                  <details
-                    key={faq.q}
-                    className="ns-faq rounded-[10px] border border-line bg-white"
-                  >
-                    <summary className="flex min-h-[52px] items-center justify-between gap-3 px-4 py-2 text-[15px] font-medium">
-                      <span>{faq.q}</span>
-                      <span
-                        className="ns-plus text-[22px] leading-none text-wine"
-                        aria-hidden="true"
-                      >
-                        +
-                      </span>
-                    </summary>
-                    <div className="px-4 pb-4 text-[15px] text-muted">
-                      {faq.a}
-                    </div>
-                  </details>
-                ))}
-              </div>
+      <section className="ns-onphoto relative overflow-hidden bg-black py-[clamp(64px,8vw,116px)]">
+        <Image
+          src={img.daLatVeDem}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <Wave flip className="absolute inset-x-0 -top-px text-cream" />
+        <Wave className="absolute inset-x-0 -bottom-px text-deep" />
+        <div className="ns-container relative flex flex-col gap-[clamp(32px,4.5vw,56px)]">
+          <div className="ns-reveal">
+            <div className="ns-eyebrow">
+              <span>08</span>
+              <i />
+              <span>Hỏi đáp</span>
             </div>
-
-            <div
-              id="khoi-dat-phong"
-              className="ns-reveal ns-ondark rounded-[28px] bg-forest p-[clamp(20px,3vw,36px)] text-[#F4EFE2]"
-            >
-              <div className="ns-eyebrow text-mist">
-                <span>09</span>
-                <i className="bg-mist!" />
-                <span>Đặt phòng</span>
-              </div>
-              <h2 className="ns-h2 text-white">Gửi yêu cầu đặt phòng</h2>
-              <BookingForm />
+            <h2 className="ns-h2">Những câu hỏi thường gặp</h2>
+            <div className="mt-5 flex flex-col gap-3">
+              {faqs.map((faq) => (
+                <details
+                  key={faq.q}
+                  className="ns-faq rounded-[10px] border border-line bg-white"
+                >
+                  <summary className="flex min-h-[52px] items-center justify-between gap-3 px-4 py-2 text-[15px] font-medium">
+                    <span>{faq.q}</span>
+                    <span
+                      className="ns-plus text-[22px] leading-none text-wine"
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div className="px-4 pb-4 text-[15px] text-muted">
+                    {faq.a}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
-        </section>
 
-        <Wave className="-mb-px text-deep" />
-      </div>
+          <div
+            id="khoi-dat-phong"
+            className="ns-reveal ns-ondark rounded-[28px] border border-white/15 bg-black/55 p-[clamp(20px,3vw,36px)] text-[#F4EFE2] backdrop-blur-sm"
+          >
+            <div className="ns-eyebrow text-mist">
+              <span>09</span>
+              <i className="bg-mist!" />
+              <span>Đặt phòng</span>
+            </div>
+            <h2 className="ns-h2 text-white">Gửi yêu cầu đặt phòng</h2>
+            <BookingForm />
+          </div>
+        </div>
+      </section>
+
       <footer
         id="lien-he"
         className="ns-ondark ns-footer bg-deep pt-4 text-[14.5px] text-mist"
