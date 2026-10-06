@@ -197,6 +197,38 @@
       transform: scaleX(1.08) translateX(3%);
     }
   }
+  /* Hiện dần khi cuộn tới; lớp is-visible do RevealOnScroll gắn vào */
+  .ns-reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  /* Biến thể hướng vào; trượt ngang chỉ bật trên màn hình rộng để mobile
+     không bị tràn ngang */
+  .ns-reveal.ns-zoom-in {
+    transform: scale(0.9);
+  }
+  @media (min-width: 860px) {
+    .ns-reveal.ns-from-left {
+      transform: translateX(-48px);
+    }
+    .ns-reveal.ns-from-right {
+      transform: translateX(48px);
+    }
+  }
+  .ns-reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Ảnh nền cao hơn section một chút và trôi chậm theo cuộn trang */
+  .ns-parallax {
+    top: -12% !important;
+    height: 124% !important;
+    transform: translate3d(0, var(--ns-shift, 0px), 0);
+    will-change: transform;
+  }
   .ns-polaroid {
     transition:
       opacity 0.7s ease,
@@ -297,6 +329,9 @@
     }
     .ns-leaf {
       display: none;
+    }
+    .ns-parallax {
+      transform: none;
     }
     .ns-zoom {
       transition: none;

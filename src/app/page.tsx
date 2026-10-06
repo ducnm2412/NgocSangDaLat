@@ -1,4 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import {
   BookingForm,
@@ -316,7 +317,7 @@ function Backdrop({
         fill
         sizes="100vw"
         quality={100}
-        className={`object-cover ${position}`}
+        className={`ns-parallax object-cover ${position}`}
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,41,31,0.55)_0%,rgba(22,41,31,0.12)_42%,rgba(22,41,31,0.06)_100%)]" />
       <Wave flip className="absolute inset-x-0 -top-px text-cream" />
@@ -372,9 +373,9 @@ export default function Home() {
 
         <header className="relative z-2">
           <div className="ns-container flex items-center justify-between gap-5 py-[18px]">
-            <a href="#top" aria-label="Ngọc Sang Đà Lạt – về đầu trang">
+            <Link href="/" aria-label="Ngọc Sang Đà Lạt – về trang chủ">
               <Wordmark />
-            </a>
+            </Link>
             <nav
               aria-label="Điều hướng chính"
               className="hidden gap-[30px] text-[15px] font-medium nav:flex"
@@ -443,7 +444,7 @@ export default function Home() {
           className="pt-[clamp(28px,4vw,48px)] pb-[clamp(20px,3vw,36px)]"
         >
           <div className="ns-container flex flex-wrap items-center gap-[clamp(32px,6vw,80px)]">
-            <div className="ns-reveal min-w-0 flex-[1_1_380px]">
+            <div className="ns-reveal ns-from-left min-w-0 flex-[1_1_380px]">
               <Heading no="01" label="Về Ngọc Sang">
                 Ở trung tâm, đi đâu cũng gần
               </Heading>
@@ -487,7 +488,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="ns-reveal relative min-w-0 flex-[1_1_380px] pr-[clamp(20px,4vw,44px)] pb-[clamp(28px,4vw,48px)]">
+            <div className="ns-reveal ns-from-right relative min-w-0 flex-[1_1_380px] pr-[clamp(20px,4vw,44px)] pb-[clamp(28px,4vw,48px)]">
               <Image
                 src={img.leTan}
                 alt="Quầy lễ tân Ngọc Sang Hotel"
@@ -564,7 +565,7 @@ export default function Home() {
             Những khoảnh khắc đáng nhớ
           </Heading>
           <div className="mt-6 flex flex-wrap items-center gap-[clamp(28px,5vw,64px)]">
-            <div className="ns-reveal relative min-w-0 flex-[1_1_340px] pr-[clamp(16px,3vw,36px)] pb-[clamp(16px,2vw,24px)]">
+            <div className="ns-reveal ns-from-left relative min-w-0 flex-[1_1_340px] pr-[clamp(16px,3vw,36px)] pb-[clamp(16px,2vw,24px)]">
               <Image
                 src={img.trangTriPhong}
                 alt="Giường trang trí cánh hoa hồng, khăn xếp thiên nga và bóng bay"
@@ -692,12 +693,12 @@ export default function Home() {
               fill
               sizes="100vw"
               quality={100}
-              className="object-cover object-[center_50%]"
+              className="ns-parallax object-cover object-[center_50%]"
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.8)_0%,rgba(22,41,31,0.4)_48%,rgba(22,41,31,0.1)_100%)]" />
           </div>
           <div className="ns-container relative flex flex-wrap items-center gap-[clamp(28px,5vw,64px)] py-[clamp(72px,10vw,140px)]">
-            <div className="ns-reveal min-w-0 flex-[1_1_320px]">
+            <div className="ns-reveal ns-from-left min-w-0 flex-[1_1_320px]">
               <div className="text-[13px] font-medium tracking-[0.22em] text-gold-soft uppercase">
                 Trải nghiệm Đà Lạt
               </div>
@@ -764,7 +765,7 @@ export default function Home() {
                 <figure
                   key={shot.caption}
                   style={{ transitionDelay: `${(i % 3) * 80}ms` }}
-                  className={`ns-reveal ns-polaroid relative bg-white px-[clamp(7px,1vw,11px)] pt-[clamp(7px,1vw,11px)] pb-2 shadow-[0_18px_30px_-16px_rgba(22,41,31,0.55)] ${shot.tilt}`}
+                  className={`ns-reveal ns-zoom-in ns-polaroid relative bg-white px-[clamp(7px,1vw,11px)] pt-[clamp(7px,1vw,11px)] pb-2 shadow-[0_18px_30px_-16px_rgba(22,41,31,0.55)] ${shot.tilt}`}
                 >
                   <span
                     aria-hidden="true"
@@ -844,7 +845,7 @@ export default function Home() {
           alt=""
           fill
           sizes="100vw"
-          className="object-cover"
+          className="ns-parallax object-cover"
         />
         <div className="absolute inset-0 bg-black/70" />
         <Wave flip className="absolute inset-x-0 -top-px text-cream" />
@@ -901,9 +902,13 @@ export default function Home() {
       >
         <div className="ns-container grid gap-x-10 gap-y-7 nav:grid-cols-[1.1fr_1.2fr_1.3fr]">
           <div className="flex flex-col items-start gap-3">
-            <div className="text-white">
+            <Link
+              href="/"
+              aria-label="Ngọc Sang Đà Lạt – về trang chủ"
+              className="text-white!"
+            >
               <Wordmark />
-            </div>
+            </Link>
             <span>Khách sạn, dịch vụ lưu trú tại Đà Lạt</span>
             <div className="flex flex-wrap gap-x-5">
               {[
