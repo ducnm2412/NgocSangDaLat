@@ -6,6 +6,7 @@ import {
   BookRoomLink,
 } from "@/components/booking";
 import { AutoScroller } from "@/components/auto-scroller";
+import { FallingLeaves } from "@/components/leaves";
 import { Lightbox } from "@/components/lightbox";
 import { RevealOnScroll } from "@/components/reveal";
 import { img } from "@/lib/images";
@@ -300,9 +301,11 @@ function Wave({ className, flip }: { className: string; flip?: boolean }) {
 // đậm ở phía trên để tiêu đề trắng đọc được; mép section là sóng màu kem.
 function Backdrop({
   src,
+  position = "",
   noBottomEdge,
 }: {
   src: StaticImageData;
+  position?: string;
   noBottomEdge?: boolean;
 }) {
   return (
@@ -313,7 +316,7 @@ function Backdrop({
         fill
         sizes="100vw"
         quality={100}
-        className="object-cover"
+        className={`object-cover ${position}`}
       />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(22,41,31,0.55)_0%,rgba(22,41,31,0.12)_42%,rgba(22,41,31,0.06)_100%)]" />
       <Wave flip className="absolute inset-x-0 -top-px text-cream" />
@@ -349,6 +352,7 @@ export default function Home() {
     <BookingProvider>
       <RevealOnScroll />
       <Lightbox />
+      <FallingLeaves />
       <section
         id="top"
         className="ns-onphoto relative overflow-hidden bg-deep text-white"
@@ -395,7 +399,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="ns-container relative z-1 flex items-end justify-between gap-8 pt-[clamp(40px,7vw,96px)] pb-[clamp(72px,9vw,130px)]">
+        <div className="ns-container flex items-end justify-between gap-8 pt-[clamp(40px,7vw,96px)] pb-[clamp(72px,9vw,130px)]">
           <div className="ns-rise max-w-[700px]">
             <h1 className="font-display [text-shadow:0_2px_18px_rgba(22,41,31,0.6)] leading-[1.15] font-medium">
               <span className="block text-[clamp(34px,5vw,60px)] text-balance">
@@ -507,7 +511,7 @@ export default function Home() {
         id="phong"
         className="ns-onphoto relative overflow-hidden bg-deep py-[clamp(64px,8vw,116px)]"
       >
-        <Backdrop src={img.daLatVenHo} />
+        <Backdrop src={img.anhNen5} position="object-[center_45%]" />
         <div className="ns-container relative">
           <Heading no="02" label="Phòng nghỉ">
             Phòng cho mọi chuyến đi
@@ -642,7 +646,11 @@ export default function Home() {
         id="chi-nhanh"
         className="ns-onphoto relative overflow-hidden bg-deep py-[clamp(64px,8vw,116px)]"
       >
-        <Backdrop src={img.daLatHoDoiThong} noBottomEdge />
+        <Backdrop
+          src={img.anhNen6}
+          position="object-[center_55%]"
+          noBottomEdge
+        />
         <div className="ns-container relative">
           <Heading no="04" label="Chi nhánh">
             Ba địa chỉ tại Đà Lạt
@@ -675,17 +683,19 @@ export default function Home() {
         <div className="ns-torn-rim" />
         <section
           id="da-lat"
-          className="ns-onphoto ns-torn-top relative overflow-hidden bg-deep text-white"
+          className="ns-onphoto relative overflow-hidden text-white"
         >
-          <Image
-            src={img.daLatVeDem}
-            alt="Thành phố Đà Lạt lên đèn về đêm, nhìn qua những thân thông"
-            fill
-            sizes="100vw"
-            quality={100}
-            className="object-cover object-[center_58%]"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.8)_0%,rgba(22,41,31,0.4)_48%,rgba(22,41,31,0.1)_100%)]" />
+          <div className="ns-torn-top absolute inset-0 bg-deep">
+            <Image
+              src={img.anhNen7}
+              alt="Hồ Xuân Hương buổi sáng, nhà thuỷ tạ và hàng thông bên bờ hồ"
+              fill
+              sizes="100vw"
+              quality={100}
+              className="object-cover object-[center_50%]"
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(22,41,31,0.8)_0%,rgba(22,41,31,0.4)_48%,rgba(22,41,31,0.1)_100%)]" />
+          </div>
           <div className="ns-container relative flex flex-wrap items-center gap-[clamp(28px,5vw,64px)] py-[clamp(72px,10vw,140px)]">
             <div className="ns-reveal min-w-0 flex-[1_1_320px]">
               <div className="text-[13px] font-medium tracking-[0.22em] text-gold-soft uppercase">

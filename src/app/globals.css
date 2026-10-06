@@ -47,6 +47,9 @@
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: clamp(16px, 5vw, 48px);
+    /* Nội dung nằm trên lớp lá rơi; nền của section thì nằm dưới lá */
+    position: relative;
+    z-index: 2;
   }
   .ns-section {
     padding-block: clamp(20px, 3vw, 36px);
@@ -139,10 +142,10 @@
   /* Mép giấy xé: ảnh dưới đè lên ảnh trên, mép trên bị cắt răng cưa.
      Toạ độ sinh sẵn một lần; lớp trắng phía sau lộ ra như thớ giấy. */
   .ns-torn {
+    /* Không dùng filter hay z-index ở đây: chúng gom cả nền lẫn chữ vào một
+       lớp, khiến lá rơi không thể nằm giữa nền và chữ. */
     position: relative;
-    z-index: 1;
     margin-top: -26px;
-    filter: drop-shadow(0 -4px 5px rgba(0, 0, 0, 0.45));
   }
   .ns-torn-rim {
     position: absolute;
@@ -209,6 +212,38 @@
   .ns-zoomable {
     cursor: zoom-in;
   }
+  /* Lá rơi: phần tử ngoài rơi thẳng xuống, hình lá bên trong lắc ngang và xoay */
+  .ns-leaf {
+    position: absolute;
+    top: -60px;
+    opacity: 0.85;
+    will-change: transform;
+    animation: ns-leaf-fall linear infinite;
+  }
+  .ns-leaf svg {
+    display: block;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.18));
+    animation: ns-leaf-sway ease-in-out infinite alternate;
+  }
+  /* Màn hình nhỏ: lá nhỏ lại và lắc hẹp hơn để không choán nội dung */
+  @media (max-width: 859px) {
+    .ns-leaf {
+      scale: 0.7;
+    }
+  }
+  @keyframes ns-leaf-fall {
+    to {
+      transform: translateY(calc(100lvh + 120px));
+    }
+  }
+  @keyframes ns-leaf-sway {
+    from {
+      transform: translateX(-28px) rotate(-35deg);
+    }
+    to {
+      transform: translateX(28px) rotate(55deg);
+    }
+  }
   /* Ảnh hero phóng to chậm rồi thu lại; ảnh trong thẻ phóng nhẹ khi rê chuột */
   .ns-kenburns {
     animation: ns-kenburns 20s ease-in-out infinite alternate;
@@ -259,6 +294,9 @@
     .ns-wave-back,
     .ns-kenburns {
       animation: none;
+    }
+    .ns-leaf {
+      display: none;
     }
     .ns-zoom {
       transition: none;

@@ -1,3 +1,6 @@
+import anhNen5 from "../../public/anhnen5.jpg";
+import anhNen6 from "../../public/anhnen6.jpg";
+import anhNen7 from "../../public/anhnen7.jpg";
 import daLatHoDoiThong from "../../public/images/da-lat-ho-doi-thong-lon.jpg";
 import daLatVeDem from "../../public/images/da-lat-ve-dem-lon.jpg";
 import daLatVenHo from "../../public/images/da-lat-ven-ho-lon.jpg";
@@ -22,6 +25,9 @@ import xuanBinhVilla from "../../public/images/xuan-binh-villa.jpg";
 import logo from "../../public/logo.jpg";
 
 export const img = {
+  anhNen5,
+  anhNen6,
+  anhNen7,
   daLatHoDoiThong,
   daLatVeDem,
   daLatVenHo,
